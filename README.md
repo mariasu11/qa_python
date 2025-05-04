@@ -8,11 +8,10 @@ A pytest-based setup for:
 
 ## Quickstart
 
-```git clone https://github.com/mariasu11/qa_python.git```
-```cd api_test_framework```
-
-```python3 -m venv venv && source venv/bin/activate```
-```pip install -r requirements.txt```
+1. ```git clone https://github.com/mariasu11/qa_python.git```
+2. ```cd api_test_framework```
+3. ```python3 -m venv venv && source venv/bin/activate```
+4. ```pip install -r requirements.txt```
 
 # Point at your API
 export BASE_URL=https://api.example.com
