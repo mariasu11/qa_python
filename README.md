@@ -8,20 +8,20 @@ A pytest-based setup for:
 
 ## Quickstart
 
-git clone <your-repo>
-cd api_test_framework
+```git clone https://github.com/mariasu11/qa_python.git```
+```cd api_test_framework```
 
-python3 -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
+```python3 -m venv venv && source venv/bin/activate```
+```pip install -r requirements.txt```
 
 # Point at your API
 export BASE_URL=https://api.example.com
 
 # Run all tests
-pytest
+```pytest```
 
 # Only smoke tests
-pytest -m smoke
+```pytest -m smoke```
 
 # Only performance tests
-pytest -m performance
+```pytest -m performance```
