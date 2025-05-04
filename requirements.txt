@@ -1,0 +1,6 @@
+pytest>=7.0
+httpx>=0.24
+pytest-jsonschema>=0.1.0
+pytest-benchmark>=4.0
+pytest-xdist>=2.5
+pytest-html>=3.2

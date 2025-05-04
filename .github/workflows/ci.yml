@@ -1,0 +1,38 @@
+name: API Tests CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+
+      - name: Run pytest suite
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}  # set this in GitHub
+        run: |
+          source venv/bin/activate
+          pytest
+
+      - name: Upload pytest-html report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: pytest-report
+          path: report.html
